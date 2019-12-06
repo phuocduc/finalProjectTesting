@@ -8,10 +8,10 @@ import "../assets/css/home.css";
 import TravelStatic from "../components/TravelStatistic";
 import Footer from "../components/Footer";
 
-export default function home() {
+export default function Home(props) {
   return (
     <div>
-      <Navibar />
+      <Navibar user={props.user} token={props.token} setUser = {props.setUser}/>
 
       <header
         className="masthead"
@@ -39,42 +39,42 @@ export default function home() {
         </div>
       </header>
       {/* part 2 */}
-      <div class="article-list">
-        <div class="container">
-          <div class="intro">
-            <h2 class="text-center">The Reason Why You Should Visit Vietnam</h2>
-            <p class="text-center">
+      <div className="article-list">
+        <div className="container">
+          <div className="intro">
+            <h2 className="text-center">The Reason Why You Should Visit Vietnam</h2>
+            <p className="text-center">
               Vietnam is getting more and more popular nowadays as one of the
               most worth-exploring travel destinations in Southeast Asia.
             </p>
           </div>
-          <div class="row articles">
-            <div class="col-sm-6 col-md-4 item">
+          <div className="row articles">
+            <div className="col-sm-6 col-md-4 item">
               <a href="#">
-                <img class="img-fluid" src={foodImg} />
+                <img className="img-fluid" src={foodImg} />
               </a>
-              <h3 class="name">Diverse dishes</h3>
-              <p class="description">
+              <h3 className="name">Diverse dishes</h3>
+              <p className="description">
                 Vietnamese food is simple but charming and delicate, which makes
                 diners around the world fascinated.
               </p>
             </div>
-            <div class="col-sm-6 col-md-4 item">
+            <div className="col-sm-6 col-md-4 item">
               <a href="#">
-                <img class="img-fluid" src={historyImg} />
+                <img className="img-fluid" src={historyImg} />
               </a>
-              <h3 class="name">History</h3>
-              <p class="description">
+              <h3 className="name">History</h3>
+              <p className="description">
                 More than 3,000 years of building and defending the country,
                 Vietnam is an important part of the history of the world.
               </p>
             </div>
-            <div class="col-sm-6 col-md-4 item">
+            <div className="col-sm-6 col-md-4 item">
               <a href="#">
-                <img class="img-fluid" src={tourImg} />
+                <img className="img-fluid" src={tourImg} />
               </a>
-              <h3 class="name">Spectacular natural scenery</h3>
-              <p class="description">
+              <h3 className="name">Spectacular natural scenery</h3>
+              <p className="description">
                 From the jungle to the largest natural cave in the world, nature
                 offers many beautiful scenery to Vietnam.
               </p>
@@ -91,9 +91,9 @@ export default function home() {
 
       <Footer />
 
-      <div class="gototop js-top">
-        <a href="#" class="js-gotop">
-          <i class="icon-arrow-up">sdfdsf</i>
+      <div className="gototop js-top">
+        <a href="#" className="js-gotop">
+          <i className="icon-arrow-up">sdfdsf</i>
         </a>
       </div>
     </div>

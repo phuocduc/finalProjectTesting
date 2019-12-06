@@ -117,22 +117,22 @@ export default function TravelStatistic() {
   
   <div className="wrapper">
       <div className="counter col_fourth col-sm-6 col-md-4">
-        <h2 className="timer count-title count-number" data-to="63" data-speed="1500"></h2>
+        <h2 className="timer count-title count-number" data-to="63" data-speed="1500">0</h2>
          <p className="count-text ">PROVINCE</p>
       </div>
   
       <div className="counter col_fourth col-sm-6 col-md-4">
-        <h2 className="timer count-title count-number" data-to="2321" data-speed="1500"></h2>
+        <h2 className="timer count-title count-number" data-to="2321" data-speed="1500">0</h2>
         <p className="count-text ">ISLANDS</p>
       </div>
   
       <div className="counter col_fourth col-sm-6 col-md-4">
-        <h2 className="timer count-title count-number" data-to="13510237" data-speed="1500"></h2>
+        <h2 className="timer count-title count-number" data-to="13510237" data-speed="1500">0</h2>
         <p className="count-text ">TRAVELERS</p>
       </div>
   
       <div className="counter col_fourth end col-sm-6 col-md-4">
-        <h2 className="timer count-title count-number" data-to="12159213" data-speed="1500"></h2>
+        <h2 className="timer count-title count-number" data-to="12159213" data-speed="1500">0</h2>
         <p className="count-text ">HAPPY CUSTOMER</p>
       </div>
   </div>

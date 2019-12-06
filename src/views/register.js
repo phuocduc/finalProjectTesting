@@ -1,10 +1,12 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import "../assets/css/registerForm.css";
 
 export default function Register() {
-  
   const [userRegister, setUserRegister] = useState({});
-  const handleSubmit = async () =>{
+
+
+  const handleSubmit = async (e) =>{
+    e.preventDefault()
     const res = await fetch("https://127.0.0.1:5000/register/",{
         headers: {
           'Accept': 'application/json',
@@ -14,7 +16,10 @@ export default function Register() {
         body: JSON.stringify(userRegister) 
         })
     const data = await res.json()
-    console.log(data)
+    if(data.state === "success")
+    {
+       return alert("success")
+    }
   }
 
 
@@ -23,7 +28,7 @@ export default function Register() {
     <div className="register-photo">
       <div className="form-container">
         <div className="image-holder"></div>
-        <form method="POST" onSubmit={handleSubmit} >
+        <form method="POST" onSubmit={e => handleSubmit(e)} >
           <h2 className="text-center">
             <strong>Create</strong> an account.
           </h2>
@@ -35,6 +40,7 @@ export default function Register() {
               placeholder="User Name"
               onChange = {(e)=>setUserRegister({...userRegister, username: e.target.value})}
             />
+
           </div>
           <div className="form-group"> 
             <input
