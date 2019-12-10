@@ -12,9 +12,9 @@ import Adminpage from "./views/Adminpage";
 import UpdateTour from "./views/UpdateTour";
 import ErrorPage from "./views/ErrorPage"
 import TourInfo from "./views/TourInfo";
-import TourItems from "./views/TourItems";
+import ImageTour from "./views/ImageTour";
 import CreateTicketExp from "./views/CreateTicketExp";
-import UpdateTourItem from "./views/UpdateTourItem";
+import UpdateImages from "./views/UpdateImages";
 
 function App() {
   // get from url 
@@ -63,7 +63,7 @@ function App() {
       />
       
       <Route
-        path="/products/:id"
+        path="/tours/:id"
         exact
         render={() => <UpdateTour/>}
       />
@@ -106,9 +106,9 @@ function App() {
     />
     
       <Route
-      path="/products/items/:id"
+      path="/pictures/:id"
       exact
-      render={() => <UpdateTourItem />}
+      render={() => <UpdateImages />}
     />
     
       <Route
@@ -117,9 +117,9 @@ function App() {
       render={() => <RecoverPass/>}
     />
       <Route
-      path="/products/:id/items"
+      path="/tours/:id/pictures"
       exact
-      render={() => <TourItems/>}
+      render={() => <ImageTour/>}
     />
   
       <Route
@@ -128,6 +128,10 @@ function App() {
       render={() => <CreateTicketExp/>}
     />
   
+    
+
+  
+    
 
     </Switch>
   );
