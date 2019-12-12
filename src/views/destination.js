@@ -20,7 +20,7 @@ export default function Destination(props) {
     setTourInfo(data.tours)
   } 
 
-
+ 
 
   useEffect(() => {
     getTour();
